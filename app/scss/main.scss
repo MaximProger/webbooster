@@ -1,0 +1,166 @@
+@import "config";
+
+body {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $text;
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+.btn {
+  border-radius: 20px;
+  background: $pink;
+  border: 1px solid $pink;
+  color: #fff;
+  padding: 12px 50px;
+  font-size: 16px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: $pink;
+    background-color: transparent;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cards__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+// Cards
+.cards__item {
+  max-width: 24%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px 0px;
+}
+
+.cards__img {
+  max-width: 125px;
+  max-height: 166px;
+  width: 125px;
+  height: 166px;
+  object-fit: scale-down;
+}
+
+.cards__name {
+  text-align: center;
+  display: block;
+  margin: 7px 0;
+}
+
+.cards__price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+// Modal
+.modal__mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba($color: #000000, $alpha: 0.5);
+  z-index: 9;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal {
+  background: #fff;
+  max-width: 600px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 20px;
+  border-radius: 20px;
+}
+
+.modal__inner {
+  position: relative;
+}
+
+.modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.modal__form {
+  padding: 5px;
+  text-align: center;
+}
+
+.modal__input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+  border: 1px solid $pink;
+  font: inherit;
+  padding-left: 5px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.modal__btn {
+  margin-top: 20px;
+}
+
+.modal__error {
+  color: rgb(184, 59, 28);
+  text-align: center;
+  margin-top: 7px;
+}
+
+@media (max-width: $tablet) {
+}
+
+@media (max-width: $mobile) {
+}
